@@ -28,9 +28,6 @@ def run_calc(onExit):
     thread = threading.Thread(target = run)
     thread.start()
 
-    def f():
-        print('ok')
-
 
 def e():
     print('exited')
