@@ -27,6 +27,7 @@ def run_calc(onExit):
 
     thread = threading.Thread(target = run)
     thread.start()
+    thread.join()
 
 
 def e():
@@ -35,3 +36,16 @@ def e():
 if __name__ == '__main__':
     main()
     run_calc(e)
+    """
+    def doCalc():
+
+        def rc():
+            run_calc(e)
+
+        t = threading.Thread(target = rc)
+        t.start()
+        t.join()
+
+    doCalc()
+    """
+    print('terminated')
